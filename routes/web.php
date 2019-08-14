@@ -32,6 +32,7 @@ Route::get('/books/{id}','books@fullview')->name('viewFullBook');
 Route::post('/search/{q}','search@search')->name('lookUp');
 Route::get('/search/{q}','search@search')->name('lookup');
 Route::get('/books/show/{id}','books@searchview')->name('viewBookFromSearch');
+Route::get('/review/edit/{id}','users@reviewForm');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
