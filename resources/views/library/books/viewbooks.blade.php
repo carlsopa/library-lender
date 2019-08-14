@@ -8,13 +8,14 @@
 {{$firstname = $author->author_firstName}} --}}
 {{-- @endforeach --}}
 @foreach($books as $book)
-<img src='{{$book->cover}}'/>
-Title: {{$book->title}}</br>
-@foreach($authors as $author)
-Author: {{$author->author_Name}}</br>
+	<img src='{{$book->cover}}'/>
+	Title: {{$book->title}}</br>
+		@foreach($authors as $author)
+			Author: {{$author->author_Name}}</br>
+		@endforeach
+	Description: {{$book->description}}
 @endforeach
-Description: {{$book->description}}
-@endforeach
+<br />Your Rating: &#9734
 {{-- {{$firstname}} --}}
 {{-- Title: {{ $books->title}}</br> --}}
 {{-- Author: {{}} --}}
