@@ -36,7 +36,7 @@
 			 return redirect('/home');
 		}
 		public function view(){
-			$books = \App\book::where('userId',auth()->id())->get();
+			$books = \App\Book::where('userId',auth()->id())->get();
 			return view('library.books.view',compact('books'));
 		}
 		public function fullview($id){

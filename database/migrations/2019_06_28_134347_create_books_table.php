@@ -20,7 +20,7 @@ class CreateBooksTable extends Migration
             $table->integer('authorId');
              //$table->integer('genreId');
             $table->string('title');
-            $table->integer('isbn');
+            $table->string('isbn');
             $table->binary('description');
             $table->string('preview');
             $table->string('cover');

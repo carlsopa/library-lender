@@ -29,7 +29,9 @@ class DatabaseSeeder extends Seeder
         $json = File::get("database/data/books_seed.json");
         $data = json_decode($json,true);
         foreach($data as $obj){
+            echo$obj['bookId'];
         	book::create(array(
+                'bookId'=>$obj['bookId'],
 	        	'userId'=>$obj['userId'],
 		        'authorId'=>$obj['authorId'],
 		        'title'=>$obj['title'],

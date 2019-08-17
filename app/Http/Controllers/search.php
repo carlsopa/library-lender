@@ -20,7 +20,6 @@ class search extends Controller {
 		$params = array('maxResults'=>40);
 		$results = $service->volumes->listVolumes($term,$params);
 		$book_collection = collect($results);
-		//$current_book_page = $book_collection->slice(($current_page-1)*10,10)->all();
 		$current_book_page = $book_collection->forPage($current_page,10);
 		$books_to_show = new LengthAwarePaginator($current_book_page,count($book_collection),10,$current_page,['path'=>LengthAwarePaginator::resolveCurrentPath()]);
 		return view('library.search')->with(compact('books_to_show'));

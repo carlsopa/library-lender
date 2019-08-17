@@ -6,8 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class book extends Model
 {
-	protected $primaryKey = 'bookId'; 
+	protected $primaryKey = 'recordId'; 
 	protected $fillable = [
+        'bookId',
 		'userId',
         'authorId',
         'title',
